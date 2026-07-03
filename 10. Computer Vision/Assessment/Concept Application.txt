@@ -1,0 +1,78 @@
+1.When an image shape is printed as (480, 640, 3):
+480 → Height of the image (number of rows/pixels vertically)
+640 → Width of the image (number of columns/pixels horizontally)
+3 → Number of colour channels
+
+The 3 channels in OpenCV usually represent:
+
+Blue
+Green
+Red
+
+So the image is a colour image in BGR format.
+
+2.The BGR vs RGB distinction matters because different libraries expect different channel orders.
+OpenCV uses BGR
+Libraries like Matplotlib and PIL use RGB
+
+If you display a BGR image as RGB without conversion, colours appear incorrect.
+
+Example:
+
+Red objects may appear blue
+Blue may appear red
+
+That is why conversion is often required:
+
+3.It uses pixel area relation
+Produces smoother results
+Reduces aliasing and noise
+Comparison
+INTER_LINEAR
+Faster
+Good for enlarging images
+Default interpolation method
+INTER_AREA
+Better for reducing image size
+Gives higher-quality downscaled images
+
+Example:
+
+Resizing a 4000×3000 image to 500×500 → use INTER_AREA
+
+4.HSV stands for:
+
+H → Hue (actual colour)
+S → Saturation (colour intensity)
+V → Value/Brightness
+
+BGR only stores raw colour intensities, while HSV separates:
+
+colour information
+brightness information
+
+This makes HSV better for:
+
+colour detection
+segmentation
+object tracking
+handling lighting variations
+
+Example:
+Detecting a red object is easier in HSV than in BGR.
+
+5.Cropping
+Removes unwanted parts of the image
+Keeps original pixel values unchanged
+Focuses on a specific region
+
+Example:
+Extracting only the brain area from an MRI scan.
+
+Resizing
+Changes the overall dimensions of the image
+Pixel values are recalculated using interpolation
+Entire image content is scaled
+
+Example:
+Changing a scan from 1024×1024 to 512×512.
