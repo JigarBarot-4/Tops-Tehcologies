@@ -1,0 +1,24 @@
+
+======================================================================
+Timestamp: 2026-07-07 07:55:02.974265
+Mode: RAG
+Query: Cancellation Policy
+Output: Simulated Answer: Retrieved policy information displayed above.
+
+======================================================================
+Timestamp: 2026-07-07 11:01:07.545069
+Mode: RAG
+Query: how use this policy?
+Output: Simulated Answer: Retrieved policy information displayed above.
+
+======================================================================
+Timestamp: 2026-07-07 11:02:43.797036
+Mode: Classify
+Query: Refund Policy
+Output: Payment Issue | Closest Example: I was charged twice for one order.
+
+======================================================================
+Timestamp: 2026-07-07 11:02:51.371592
+Mode: RAG
+Query: Refund Policy
+Output: Simulated Answer: Retrieved policy information displayed above.
